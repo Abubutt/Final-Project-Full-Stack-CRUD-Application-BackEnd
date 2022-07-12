@@ -20,7 +20,16 @@ const Campus = db.define("campus", {
 
   description: {
     type: Sequelize.STRING,
-  }
+  },
+
+  imageUrl: {
+    type: Sequelize.BLOB,
+    allowNull: true,
+    defaultValue: blankProfile.png,
+    validate: {
+      isUrl: true
+    }
+  },
 });
 
 // Export the campus model
