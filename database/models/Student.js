@@ -24,16 +24,14 @@ const Student = db.define("student", {
       isEmail: true
     }
   },
-
-  imageUrl: {
-    type: Sequelize.BLOB,
-    allowNull: true,
-    defaultValue: blankProfile.png,
-    validate: {
-      isUrl: true
-    }
-  },
-
+//  imageUrl: {
+//    type: Sequelize.BLOB,
+//    allowNull: true,
+//    defaultValue: blankProfile.png,
+//    validate: {
+//      isUrl: true
+//    }
+//  },
   gpa: {
     type: Sequelize.FLOAT,
     allowNull: true,
@@ -46,3 +44,4 @@ const Student = db.define("student", {
 
 // Export the student model
 module.exports = Student;
+
